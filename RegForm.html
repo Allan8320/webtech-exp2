@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Volunteer Registration Form</title>
+</head>
+
+<body>
+    <h1>Event Volunteer Registration Form</h1>
+
+    <!-- Progress indicator -->
+    <p>Form Completion Progress:</p>
+    <progress value="50" max="100"></progress>
+    <p>(50% completed)</p>
+   
+
+    <form action="error.php" method="post">
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Your Information</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullname" required placeholder="Enter your full name" autofocus max="50"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Create a password"
+                minlength="6"><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com"><br><br>
+
+            <label for="phone">Contact Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="10-digit number"><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" required min="18" max="60" placeholder="18-60 only"><br><br>
+
+            <label for="linkedin">LinkedIn Profile URL:</label>
+            <input type="url" id="linkedin" name="linkedin" required
+                placeholder="https://linkedin.com/in/yourprofile"><br><br>
+
+            <label for="searcharea">Search Your Area:</label>
+            <input type="search" id="searcharea" name="searcharea" required
+                placeholder="Enter your city or area"><br><br>
+
+            <label for="photo">Upload Your Photo:</label>
+            <input type="file" id="photo" name="photo" required accept="image/*"><br><br>
+        </fieldset>
+
+        <!-- Volunteer Preferences Section -->
+        <fieldset>
+            <legend>Your Preferences</legend>
+
+            <label>Preferred Shift:</label><br>
+            <input type="radio" id="morning" name="shift" value="Morning" required>
+            <label for="morning">Morning</label>
+            <input type="radio" id="evening" name="shift" value="Evening">
+            <label for="evening">Evening</label><br><br>
+
+            <label>Areas of Interest:</label><br>
+            <input type="checkbox" id="stage" name="interest_stage" value="Stage Management">
+            <label for="stage">Stage Management</label><br>
+
+            <input type="checkbox" id="crowd" name="interest_crowd" value="Crowd Control">
+            <label for="crowd">Crowd Control</label><br>
+
+            <input type="checkbox" id="registration" name="interest_registration" value="Registration Desk">
+            <label for="registration">Registration Desk</label><br>
+
+            <input type="checkbox" id="technical" name="interest_technical" value="Technical Support">
+            <label for="technical">Technical Support</label><br><br>
+
+            <label for="role">Choose Your Volunteer Role:</label>
+            <select id="role" name="role" required>
+                <option value="">Select a Role </option>
+                <option value="usher">Usher</option>
+                <option value="logistics">Logistics Assistant</option>
+                <option value="tech">Technical Volunteer</option>
+                <option value="social">Social Media Handler</option>
+                <option value="host">Event Host</option>
+            </select><br><br>
+
+            <label for="bio">Why do you want to volunteer?</label><br>
+            <textarea id="bio" name="bio" rows="4" placeholder="Share your motivation..." required></textarea><br><br>
+        </fieldset>
+
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit Registration">
+        <input type="reset" value="Clear Form">
+
+    </form>
+
+</body>
+
+</html>
